@@ -1,3 +1,4 @@
+import { DateTime } from './js/luxon.js';
 import Library from './js/library.js';
 
 const library = new Library();
@@ -65,21 +66,11 @@ function addBookButtonLIstener() {
 
 function refreshTime() {
   const timeDisplay = document.getElementById('date-time');
-  const dateOptions = {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-  };
-  const dateString = new Date().toLocaleString('en-us', dateOptions);
-  timeDisplay.textContent = dateString;
+  timeDisplay.textContent = DateTime.now().setLocale('en-GB').toLocaleString(DateTime.DATE_HUGE);
 }
 
 function initTime() {
   refreshTime();
-  setInterval(refreshTime, 1000);
 }
 
 const queryListBooks = document.getElementById('list-books');
