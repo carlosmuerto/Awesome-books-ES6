@@ -1,5 +1,5 @@
-import { DateTime } from './js/luxon.js';
-import Library from './js/library.js';
+import { DateTime } from './modules/luxon.js';
+import Library from './modules/library.js';
 
 const library = new Library();
 
