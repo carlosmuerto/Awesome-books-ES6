@@ -9,12 +9,12 @@ const library = new Library();
 
 const listOfBooksElement = document.querySelector('#list-books .list-of-books');
 
-function deleteBookElement(parentContainer, id) {
+const deleteBookElement = (parentContainer, id) => {
   parentContainer.remove();
   library.remove(id);
-}
+};
 
-function CreateBookItemHTML(id, title, author) {
+const CreateBookItemHTML = (id, title, author) => {
   const divContainer = document.createElement('div');
   const bookTitleAndAuthorElement = document.createElement('p');
   const deleteBookBtn = document.createElement('button');
@@ -36,17 +36,17 @@ function CreateBookItemHTML(id, title, author) {
   divContainer.appendChild(deleteBookBtn);
 
   return divContainer;
-}
+};
 
-function AddBookToContainerElement(book) {
+const AddBookToContainerElement = (book) => {
   listOfBooksElement.appendChild(CreateBookItemHTML(book.id, book.title, book.author));
-}
+};
 
-function createBookListing() {
+const createBookListing = () => {
   library.books.forEach((book) => {
     AddBookToContainerElement(book);
   });
-}
+};
 
 // ADD book from
 
@@ -54,24 +54,24 @@ const addBookForm = document.querySelector('#add-book-form');
 const bookTitleInput = addBookForm.querySelector('#title-input');
 const bookAuthorInput = addBookForm.querySelector('#author-input');
 
-function addBook(e) {
+const addBook = (e) => {
   e.preventDefault();
   AddBookToContainerElement(library.createBookAndAdd(bookTitleInput.value, bookAuthorInput.value));
   return false;
-}
+};
 
-function addBookButtonLIstener() {
+const addBookButtonLIstener = () => {
   addBookForm.addEventListener('submit', addBook);
-}
+};
 
-function refreshTime() {
+const refreshTime = () => {
   const timeDisplay = document.getElementById('date-time');
   timeDisplay.textContent = DateTime.now().setLocale('en-GB').toLocaleString(DateTime.DATE_HUGE);
-}
+};
 
-function initTime() {
+const initTime = () => {
   refreshTime();
-}
+};
 
 const queryListBooks = document.getElementById('list-books');
 const queryAddBook = document.getElementById('add-book');
@@ -81,53 +81,53 @@ const queryMenuList = document.getElementById('menuList');
 const queryMenuAdd = document.getElementById('menuAdd');
 const queryMenuContact = document.getElementById('menuContact');
 
-function removeActiveLink() {
+const removeActiveLink = () => {
   queryMenuList.classList.remove('active');
   queryMenuAdd.classList.remove('active');
   queryMenuContact.classList.remove('active');
-}
+};
 
-function clickOnList(e) {
+const clickOnList = (e) => {
   e.preventDefault();
   removeActiveLink();
   e.target.classList.add('active');
   queryListBooks.style.display = 'block';
   queryAddBook.style.display = 'none';
   queryContact.style.display = 'none';
-}
+};
 
-function clickOnAdd(e) {
+const clickOnAdd = (e) => {
   e.preventDefault();
   removeActiveLink();
   e.target.classList.add('active');
   queryListBooks.style.display = 'none';
   queryAddBook.style.display = 'block';
   queryContact.style.display = 'none';
-}
+};
 
-function clickOnContact(e) {
+const clickOnContact = (e) => {
   e.preventDefault();
   removeActiveLink();
   e.target.classList.add('active');
   queryListBooks.style.display = 'none';
   queryAddBook.style.display = 'none';
   queryContact.style.display = 'block';
-}
+};
 
-function addMenusListeners() {
+const addMenusListeners = () => {
   queryMenuList.addEventListener('click', clickOnList);
   queryMenuAdd.addEventListener('click', clickOnAdd);
   queryMenuContact.addEventListener('click', clickOnContact);
-}
+};
 
 // INITS
 
-function init() {
+const init = () => {
   library.initBookStorage();
   createBookListing();
   addBookButtonLIstener();
   addMenusListeners();
   initTime();
-}
+};
 
 window.addEventListener('load', init);

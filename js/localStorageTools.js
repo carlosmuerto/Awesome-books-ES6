@@ -1,6 +1,5 @@
 /* Check for storage Availability copy form documentation */
-
-export default function storageAvailable() {
+const storageAvailable = () => {
   let storage;
   try {
     storage = window.localStorage;
@@ -22,4 +21,5 @@ export default function storageAvailable() {
       // acknowledge QuotaExceededError only if there's something already stored
       && (storage && storage.length !== 0);
   }
-}
+};
+export default storageAvailable;
