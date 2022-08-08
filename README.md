@@ -1,39 +1,54 @@
-# Project Name
+# Awesome books: with ES6
 
-> One paragraph statement about the project.
+> In this project, I will restructure my [_Awesome books_](https://github.com/cmolinan/awesome-books) app code. The goal is to make it more organized by using modules. I will also practice the ES6 syntax that you have learned.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./app_screenshot.JPG)
 
 Additional description about the project and its features.
 
+## Learning objectives
+
+- Use ES6 modules to write modular JavaScript.
+- Learn how to use proper ES6 syntax.
+- Understand improvements that ES6 brings to JavaScript.
+- Use npm as software packages system.
+- 
 ## Built With
 
-- Major languages,
-- frameworks,
-- technologies used
+- CSS, HTML, JavaScript (ES6)
+- luxon
+- single page aplication
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://carlosmuerto.github.io/Awesome-books-ES6/)
 
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+### To launch the project locally:
 
-### Prerequisites
+#### Step 1:
+- Clone this repo locally using git and the following git command
+	```bash 
+	git clone https://github.com/cmolinan/awesome-books.git
+	```
+- or with GitHub CLI
+	```bash
+	gh repo clone cmolinan/awesome-books
+	```
 
-### Setup
+#### Step 2:
 
-### Install
+- install dependency
+	```bash
+	npm install
+	```
 
-### Usage
+#### Step 3:
 
-### Run tests
-
-### Deployment
-
-
+- Run index.html file in your browser or run a life server
+- Use developer tools in order to view Mobile version
 
 ## Authors
 
@@ -41,12 +56,6 @@ To get a local copy up and running follow these simple example steps.
 
 - GitHub: [@carlosmuerto](https://github.com/carlosmuerto)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/carlos-vivas-818ab831/)
-
-👤 **Author2**
-
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
 
 ## 🤝 Contributing
 
@@ -60,9 +69,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- ### [Awesome books repository](https://github.com/cmolinan/awesome-books)
 
 ## 📝 License
 
