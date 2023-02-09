@@ -2,7 +2,7 @@
 
 > In this project, I will restructure my [_Awesome books_](https://github.com/cmolinan/awesome-books) app code. The goal is to make it more organized by using modules. I will also practice the ES6 syntax that you have learned.
 
-![screenshot](https://user-images.githubusercontent.com/34493013/217889564-53b539dc-392c-40b4-8a01-7861728368d5.png)
+![screenshot](https://user-images.githubusercontent.com/34493013/217900016-ed5e3d41-de9a-44ce-8e8d-a2ab2c5e06b8.png)
 
 Additional description about the project and its features.
 
